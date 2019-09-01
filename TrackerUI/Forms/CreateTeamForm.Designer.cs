@@ -30,7 +30,7 @@
         {
             this.CreateTeamButton = new System.Windows.Forms.Button();
             this.RemoveSelectedMemberButton = new System.Windows.Forms.Button();
-            this.MemberListBox = new System.Windows.Forms.ListBox();
+            this.TeamMemberListBox = new System.Windows.Forms.ListBox();
             this.CreateMemberButton = new System.Windows.Forms.Button();
             this.CellphoneValue = new System.Windows.Forms.TextBox();
             this.AddNewMember = new System.Windows.Forms.GroupBox();
@@ -64,6 +64,7 @@
             this.CreateTeamButton.TabIndex = 35;
             this.CreateTeamButton.Text = "Create Team";
             this.CreateTeamButton.UseVisualStyleBackColor = true;
+            this.CreateTeamButton.Click += new System.EventHandler(this.CreateTeamButton_Click);
             // 
             // RemoveSelectedMemberButton
             // 
@@ -79,15 +80,16 @@
             this.RemoveSelectedMemberButton.TabIndex = 34;
             this.RemoveSelectedMemberButton.Text = "Remove Selected";
             this.RemoveSelectedMemberButton.UseVisualStyleBackColor = true;
+            this.RemoveSelectedMemberButton.Click += new System.EventHandler(this.RemoveSelectedMemberButton_Click);
             // 
-            // MemberListBox
+            // TeamMemberListBox
             // 
-            this.MemberListBox.FormattingEnabled = true;
-            this.MemberListBox.ItemHeight = 30;
-            this.MemberListBox.Location = new System.Drawing.Point(379, 121);
-            this.MemberListBox.Name = "MemberListBox";
-            this.MemberListBox.Size = new System.Drawing.Size(270, 334);
-            this.MemberListBox.TabIndex = 33;
+            this.TeamMemberListBox.FormattingEnabled = true;
+            this.TeamMemberListBox.ItemHeight = 30;
+            this.TeamMemberListBox.Location = new System.Drawing.Point(379, 121);
+            this.TeamMemberListBox.Name = "TeamMemberListBox";
+            this.TeamMemberListBox.Size = new System.Drawing.Size(270, 334);
+            this.TeamMemberListBox.TabIndex = 33;
             // 
             // CreateMemberButton
             // 
@@ -103,6 +105,7 @@
             this.CreateMemberButton.TabIndex = 20;
             this.CreateMemberButton.Text = "Create Member";
             this.CreateMemberButton.UseVisualStyleBackColor = true;
+            this.CreateMemberButton.Click += new System.EventHandler(this.CreateMemberButton_Click);
             // 
             // CellphoneValue
             // 
@@ -208,6 +211,7 @@
             this.AddMemberButton.TabIndex = 31;
             this.AddMemberButton.Text = "Add Member";
             this.AddMemberButton.UseVisualStyleBackColor = true;
+            this.AddMemberButton.Click += new System.EventHandler(this.AddMemberButton_Click);
             // 
             // SelectMemberDropDown
             // 
@@ -265,7 +269,7 @@
             this.ClientSize = new System.Drawing.Size(656, 596);
             this.Controls.Add(this.CreateTeamButton);
             this.Controls.Add(this.RemoveSelectedMemberButton);
-            this.Controls.Add(this.MemberListBox);
+            this.Controls.Add(this.TeamMemberListBox);
             this.Controls.Add(this.AddNewMember);
             this.Controls.Add(this.AddMemberButton);
             this.Controls.Add(this.SelectMemberDropDown);
@@ -288,7 +292,7 @@
 
         private System.Windows.Forms.Button CreateTeamButton;
         private System.Windows.Forms.Button RemoveSelectedMemberButton;
-        private System.Windows.Forms.ListBox MemberListBox;
+        private System.Windows.Forms.ListBox TeamMemberListBox;
         private System.Windows.Forms.Button CreateMemberButton;
         private System.Windows.Forms.TextBox CellphoneValue;
         private System.Windows.Forms.GroupBox AddNewMember;
