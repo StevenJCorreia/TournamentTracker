@@ -16,10 +16,13 @@ namespace TrackerUI.Forms
     {
         private List<PersonModel> availableTeamMembers = GlobalConfig.Connection.GetPerson_All();
         private List<PersonModel> selectedTeamMembers = new List<PersonModel>();
+        private ITeamRequester callingForm;
 
-        public CreateTeamForm()
+        public CreateTeamForm(ITeamRequester caller)
         {
             InitializeComponent();
+
+            callingForm = caller;
 
             RefreshLists();
         }
@@ -44,9 +47,9 @@ namespace TrackerUI.Forms
 
             t = GlobalConfig.Connection.CreateTeam(t);
 
-            ResetForm();
+            callingForm.TeamComplete(t);
 
-            RefreshLists();
+            this.Close();
         }
 
         private bool ValidateForm()
@@ -136,14 +139,6 @@ namespace TrackerUI.Forms
 
                 RefreshLists();
             }
-        }
-
-        private void ResetForm()
-        {
-            TeamNameValue.Clear();
-            availableTeamMembers.Clear();
-            selectedTeamMembers.Clear();
-            ResetMemberGroupBox();
         }
 
         private void ResetMemberGroupBox()

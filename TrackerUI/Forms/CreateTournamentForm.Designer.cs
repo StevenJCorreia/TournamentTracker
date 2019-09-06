@@ -61,6 +61,7 @@
             this.CreateTournamentButton.TabIndex = 41;
             this.CreateTournamentButton.Text = "Create Tournament";
             this.CreateTournamentButton.UseVisualStyleBackColor = true;
+            this.CreateTournamentButton.Click += new System.EventHandler(this.CreateTournamentButton_Click);
             // 
             // RemoveSelectedPrizeButton
             // 
@@ -76,6 +77,7 @@
             this.RemoveSelectedPrizeButton.TabIndex = 40;
             this.RemoveSelectedPrizeButton.Text = "Remove Selected";
             this.RemoveSelectedPrizeButton.UseVisualStyleBackColor = true;
+            this.RemoveSelectedPrizeButton.Click += new System.EventHandler(this.RemoveSelectedPrizeButton_Click);
             // 
             // PrizesLabel
             // 
@@ -112,6 +114,7 @@
             this.RemoveSelectedTeamButton.TabIndex = 37;
             this.RemoveSelectedTeamButton.Text = "Remove Selected";
             this.RemoveSelectedTeamButton.UseVisualStyleBackColor = true;
+            this.RemoveSelectedTeamButton.Click += new System.EventHandler(this.RemoveSelectedTeamButton_Click);
             // 
             // TeamsLabel
             // 
@@ -148,6 +151,7 @@
             this.CreatePrizeButton.TabIndex = 34;
             this.CreatePrizeButton.Text = "Create Prize";
             this.CreatePrizeButton.UseVisualStyleBackColor = true;
+            this.CreatePrizeButton.Click += new System.EventHandler(this.CreatePrizeButton_Click);
             // 
             // AddTeamButton
             // 
@@ -163,6 +167,7 @@
             this.AddTeamButton.TabIndex = 33;
             this.AddTeamButton.Text = "Add Team";
             this.AddTeamButton.UseVisualStyleBackColor = true;
+            this.AddTeamButton.Click += new System.EventHandler(this.AddTeamButton_Click);
             // 
             // CreateNewTeamLink
             // 
@@ -173,6 +178,7 @@
             this.CreateNewTeamLink.TabIndex = 32;
             this.CreateNewTeamLink.TabStop = true;
             this.CreateNewTeamLink.Text = "Create New";
+            this.CreateNewTeamLink.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.CreateNewTeamLink_LinkClicked);
             // 
             // SelectTeamDropDown
             // 
