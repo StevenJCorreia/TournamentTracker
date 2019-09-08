@@ -79,6 +79,7 @@
             this.LoadTournamentButton.TabIndex = 26;
             this.LoadTournamentButton.Text = "Load Tournament";
             this.LoadTournamentButton.UseVisualStyleBackColor = true;
+            this.LoadTournamentButton.Click += new System.EventHandler(this.LoadTournamentButton_Click);
             // 
             // CreateTournamentButton
             // 
@@ -94,6 +95,7 @@
             this.CreateTournamentButton.TabIndex = 27;
             this.CreateTournamentButton.Text = "Create Tournament";
             this.CreateTournamentButton.UseVisualStyleBackColor = true;
+            this.CreateTournamentButton.Click += new System.EventHandler(this.CreateTournamentButton_Click);
             // 
             // TournamentDashboardForm
             // 
